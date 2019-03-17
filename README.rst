@@ -21,13 +21,7 @@ A test database can be instantiated in the ``mongo`` shell with:
 
 Preparing Python
 ~~~~~~~~~~~~~~~~
-This code requires ``pipenv`` for installation:
-
-.. code-block:: bash
-
-   $ pip install pipenv
-   $ pipenv install
-   $ pipenv update
+The requirements can be installed with ``pip install -r requirements.txt``
 
 Running
 -------
@@ -35,7 +29,7 @@ Locally
 ~~~~~~~
 .. code-block:: bash
 
-   $ pipenv run python zoo.py run
+   $ python zoo.py run
 
 Inside Docker
 -------------

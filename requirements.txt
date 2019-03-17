@@ -1,0 +1,10 @@
+flask
+mongoengine
+flask-mongoengine
+flask-security
+flask-bootstrap
+flask-admin
+requests
+click
+easy-config
+torch
