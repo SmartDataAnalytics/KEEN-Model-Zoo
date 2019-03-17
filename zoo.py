@@ -24,21 +24,24 @@ Upload a KEEN folder with:
 from __future__ import annotations
 
 import datetime
+import io
 import json
 import os
+from base64 import urlsafe_b64decode, urlsafe_b64encode
 from typing import Optional
 
 import click
 import flask_admin
 import flask_bootstrap
 import requests
+import torch
 from easy_config import EasyConfig
 from flask import Flask, jsonify, request
 from flask_admin.contrib.mongoengine import ModelView
 from flask_mongoengine import MongoEngine
 from flask_security import MongoEngineUserDatastore, RoleMixin, Security, UserMixin
 from mongoengine.fields import (
-    BooleanField, DateTimeField, DictField, FloatField, ListField, ReferenceField, StringField,
+    BinaryField, BooleanField, DateTimeField, DictField, FloatField, ListField, ReferenceField, StringField,
 )
 
 
@@ -126,8 +129,40 @@ class Run(db.Document):
 
     upload_time = DateTimeField(default=datetime.datetime.utcnow)
     user = ReferenceField(User)
-    configuration = DictField()
-    embeddings = ListField(ReferenceField(Embedding))
+
+    configuration = DictField()  # TODO need better model for this so it can be searched
+    entity_embeddings = ListField(ReferenceField(Embedding))
+    relation_embeddings = ListField(ReferenceField(Embedding))
+    blob = BinaryField()
+
+    @property
+    def module(self) -> torch.nn.Module:
+        return torch.load(io.BytesIO(self.blob))
+
+    def set_blob(self, s: str) -> None:
+        """Set the blob object for this document.
+
+        :param s: A string representing a PyTorch module that's been encoded as a string using
+         :func:`blob_path`
+        """
+        self.blob = urlsafe_b64decode(s.encode('utf-8'))
+
+    def predict(self):
+        """Predict new links using :func:`pykeen.utilities.prediction_utils.make_predictions`."""
+        # pykeen.utilities.prediction_utils.make_predictions(...)
+        raise NotImplementedError  # TODO @mehdi
+
+
+def blob_path(path: str) -> str:
+    """Open a file and prepare it for sending in JSON in a POST."""
+    with open(path, 'rb') as file:
+        contents = file.read()
+
+    # There's all sorts of shit in it, so make it safer.
+    b64encoded_contents = urlsafe_b64encode(contents)  # bytes to bytes
+
+    # Encode the bytes using UTF-8 into a string
+    return b64encoded_contents.decode('utf-8')
 
 
 # Setup Flask-Security
@@ -137,11 +172,25 @@ security = Security(app, user_datastore)
 # Setup Flask-Boostrap
 flask_bootstrap.Bootstrap(app)
 
+
 # Setup Flask-Admin
+
+class RunView(ModelView):
+    """A custom Flask-Admin view for Runs."""
+
+    column_exclude_list = ['blob', ]
+
+
+class UserView(ModelView):
+    """A custom Flask-Admin view for Users."""
+
+    column_exclude_list = ['password', ]
+
+
 admin = flask_admin.Admin(app, 'KEEN Model Zoo', url='/')
-admin.add_view(ModelView(Run))
+admin.add_view(RunView(Run))
 admin.add_view(ModelView(Embedding))
-admin.add_view(ModelView(User))
+admin.add_view(UserView(User))
 
 
 @app.route('/upload', methods=['POST'])
@@ -150,19 +199,27 @@ def upload_kge_model():
     email = request.json['email']
     user = user_datastore.find_user(email=email)
     if user is None:
-        return jsonify(failure=True), 400
+        return jsonify(failure=True, msg=f'Could not find user: {email}'), 400
 
-    embedding_documents = []
-    for identifier, embedding in request.json['embeddings'].items():
+    entity_embedding_documents = []
+    for identifier, embedding in request.json['entity_embeddings'].items():
         embedding_document = Embedding(identifier=identifier, embedding=embedding)
         embedding_document.save()
-        embedding_documents.append(embedding_document)
+        entity_embedding_documents.append(embedding_document)
+
+    relation_embedding_documents = []
+    for identifier, embedding in request.json['relation_embeddings'].items():
+        embedding_document = Embedding(identifier=identifier, embedding=embedding)
+        embedding_document.save()
+        relation_embedding_documents.append(embedding_document)
 
     kge_model = Run(
         user=user,
         configuration=request.json['configuration'],
-        embeddings=embedding_documents,
+        entity_embeddings=entity_embedding_documents,
+        relation_embeddings=relation_embedding_documents,
     )
+    kge_model.set_blob(request.json['model'])
     kge_model.save()
 
     return jsonify(
@@ -198,12 +255,20 @@ def createuser(email: str, password: str):
 def upload(email: str, directory: str, host: str):
     """Upload a KEEN results directory."""
     config_path = os.path.join(directory, 'configuration.json')
-    embeddings_path = os.path.join(directory, 'entities_to_embeddings.json')
-    assert os.path.exists(config_path)
-    assert os.path.exists(embeddings_path)
+    entity_embeddings_path = os.path.join(directory, 'entities_to_embeddings.json')
+    relation_embeddings_path = os.path.join(directory, 'relations_to_embeddings.json')
+    model_path = os.path.join(directory, 'trained_model.pkl')
 
-    with open(embeddings_path) as file:
-        embeddings = json.load(file)
+    assert os.path.exists(config_path)
+    assert os.path.exists(entity_embeddings_path)
+    assert os.path.exists(relation_embeddings_path)
+    assert os.path.exists(model_path)
+
+    with open(entity_embeddings_path) as file:
+        entity_embeddings = json.load(file)
+
+    with open(relation_embeddings_path) as file:
+        relation_embeddings = json.load(file)
 
     with open(config_path) as file:
         configuration = json.load(file)
@@ -213,7 +278,9 @@ def upload(email: str, directory: str, host: str):
         json=dict(
             email=email,
             configuration=configuration,
-            embeddings=embeddings,
+            entity_embeddings=entity_embeddings,
+            relation_embeddings=relation_embeddings,
+            model=blob_path(model_path),
         ),
     )
     click.echo(res.status_code)
