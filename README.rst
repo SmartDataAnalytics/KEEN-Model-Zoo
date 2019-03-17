@@ -29,8 +29,21 @@ This code requires ``pipenv`` for installation:
    $ pipenv install
    $ pipenv update
 
-Run the Web App
----------------
+Running
+-------
+Locally
+~~~~~~~
 .. code-block:: bash
 
    $ pipenv run python zoo.py run
+
+Inside Docker
+-------------
+There is included a `Dockerfile` and docker-compose configuration. This is currently
+under development and doesn't work yet.
+
+The app can be run on port 80 with docker with:
+
+.. code-block:: bash
+
+   $ docker-compose up

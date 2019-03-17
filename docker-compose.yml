@@ -1,0 +1,31 @@
+# Follow guide at https://realpython.com/blog/python/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
+version: '3.1'
+services:
+  db:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: alpine
+      MONGO_INITDB_DATABASE: zoodb
+
+  zoo:
+    build: .
+    volumes:
+    - .:/app
+    environment:
+      KEEN_ZOO_SECRET_KEY: ${SECRET_KEY}
+      KEEN_ZOO_SECURITY_PASSWORD_SALT: ${SECURITY_PASSWORD_SALT}
+      KEEN_ZOO_MONGODB_DB: zoodb
+      KEEN_ZOO_MONGODB_HOST: db
+      KEEN_ZOO_MONGODB_PORT: 27017
+      #KEEN_ZOO_MONGODB_USERNAME: root
+      #KEEN_ZOO_MONGODB_PASSWORD: alpine
+    restart: always
+    command: python zoo.py run --host 0.0.0.0 --port 5000
+    ports:
+    - 80:5000
+    depends_on:
+    - db
+    links:
+    - db
