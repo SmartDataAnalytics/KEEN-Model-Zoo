@@ -10,7 +10,7 @@ How to Share Your KGE Model
 To share your KGE model (and further experimental artefacts) please make a pull request. The pull request should contain
 a directory with following files:
 
-* configuration.json: Configuration file (automatically generated)  describing the experienntal setup
+* **configuration.json**: Configuration file (automatically generated)  describing the experienntal setup
 * **entities_to_embeddings.json**: The learned embedding for the entities
 * **relations_to_embeddings.json**: (optional since not every KGE model makes use of relations): The learned embedding for the relations
 
@@ -23,7 +23,7 @@ a directory with following files:
 
 * **test.py**: A unit test that checks whether your model can be instantiated correctly using your provided files
 
-**Note**:: To ensure the quality of the shared model, we require that the corresponding experiment
+**Note**: To ensure the quality of the shared model, we require that the corresponding experiment
 was reviewed and published in a paper. Furthermore, the dataset used to train the model needs to be public accessible.
 
 We will review your pull request and assist you if any fixes are required.
