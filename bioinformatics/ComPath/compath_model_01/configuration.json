@@ -1,0 +1,21 @@
+{
+  "training_set_path": [
+    "/Users/mehdi/virtual_envs/BioKEEN/lib/python3.6/data/compath.keen.tsv"
+  ],
+  "execution_mode": "Training_mode",
+  "kg_embedding_model_name": "TransE",
+  "embedding_dim": 150,
+  "margin_loss": 12.0,
+  "scoring_function": 1,
+  "normalization_of_entities": 2,
+  "learning_rate": 0.01,
+  "batch_size": 32,
+  "num_epochs": 2500,
+  "test_set_ratio": 0.1,
+  "filter_negative_triples": true,
+  "random_seed": 2,
+  "preferred_device": "cpu",
+  "output_direc": "/Users/mehdi/PycharmProjects/BioKEEN/data/out",
+  "num_entities": 1134,
+  "num_relations": 2
+}
