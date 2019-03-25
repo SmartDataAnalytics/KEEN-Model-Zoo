@@ -1,4 +1,5 @@
-# KGE Models for ComPath
+KGE Models for ComPath
+======================
 
 This directory contains KGE models trained on ComPath [1]. The ComPath dataset contains inter- and intra-database pathway mappings
 that represent equivalent and hierarchically related pathways. The resources included
@@ -8,13 +9,14 @@ biological pathways, the *equivalentTo* and *isPartOf* relationship were introdu
 
 Following figure shows the hierarchies between pathways:
 
-![Hierachies of pathways](https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/figures/compath_example.png).
+`Hierachies of pathways <https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/figures/compath_example.png>`_
 
 ## Links to Resources
 
 * Paper: [2,3]
 * **Note**: ComPath has been updated, for this reason we have uploaded the dataset version that we have used for
- our experiments: ![dataset](https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath.keen.tsv).
+ our experiments: `dataset <https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath.keen.tsv>`_
+
 
 
 
