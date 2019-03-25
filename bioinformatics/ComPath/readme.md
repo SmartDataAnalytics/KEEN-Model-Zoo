@@ -10,7 +10,7 @@ Following figure shows the hierarchies between pathways:
 
 ![Hierachies of pathways](https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/figures/compath_example.png)
 
-## Link to Resources
+## Links to Resources
 
 * Paper: [2,3]
 * **Note**: ComPath has been updated, for this reason we have uploaded the dataset version that we have used for
