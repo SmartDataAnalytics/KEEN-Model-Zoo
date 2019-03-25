@@ -28,6 +28,7 @@ a directory with following files:
 was reviewed and published in a paper. Furthermore, the dataset used to train the model needs to be public accessible.
 
 We will review your pull request and assist you if any fixes are required.
+
 The KEEN Model ZOO is licensed under the MIT License. By contributing to the project, you agree to the license
 and copyright terms therein and release your contribution under these terms.
 
