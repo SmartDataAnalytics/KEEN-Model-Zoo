@@ -12,8 +12,8 @@ a directory with following files:
 
 * configuration.json: Configuration file (automatically generated)  describing the experienntal setup
 * **entities_to_embeddings.json**: The learned embedding for the entities
-* **relations_to_embeddings.json**: (optional since not every KGE model makes use of relations): The learned embedding for
-the relations
+* **relations_to_embeddings.json**: (optional since not every KGE model makes use of relations): The learned embedding for the relations
+
 * **entity_to_id.json**: Mapping of each entity to its id (automatically generated)
 * **relation_to_id.json**: Mapping of each relation to its id (automatically generated)
 * **evaluation_summary.json**: Achieved results (automatically generated)
@@ -21,6 +21,7 @@ the relations
 * **trained_model.pkl**: Trained model (serialized and automatically generated)
 * **readme.rst**: A description of the experiment including the links to the paper and datasets;
 example can be seen `here <ComPath/compath_model_01/readme.rst>`_
+
 * **test.py**: A unit test that checks whether your model can be instantiated correctly using your
 provided files
 
