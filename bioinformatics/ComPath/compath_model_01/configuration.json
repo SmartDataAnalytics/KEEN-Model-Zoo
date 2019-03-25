@@ -1,6 +1,6 @@
 {
   "training_set_path": [
-    "/Users/mehdi/virtual_envs/BioKEEN/lib/python3.6/data/compath.keen.tsv"
+    "/Users/mehdi/PycharmProjects/BioKEEN/data/compath.keen.tsv"
   ],
   "execution_mode": "Training_mode",
   "kg_embedding_model_name": "TransE",
@@ -16,6 +16,6 @@
   "random_seed": 2,
   "preferred_device": "cpu",
   "output_direc": "/Users/mehdi/PycharmProjects/BioKEEN/data/out",
-  "num_entities": 1134,
+  "num_entities": 1125,
   "num_relations": 2
 }
