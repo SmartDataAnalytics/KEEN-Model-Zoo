@@ -19,11 +19,9 @@ a directory with following files:
 * **evaluation_summary.json**: Achieved results (automatically generated)
 * **losses.json**: Loss values for each epoch (automatically generated)
 * **trained_model.pkl**: Trained model (serialized and automatically generated)
-* **readme.rst**: A description of the experiment including the links to the paper and datasets;
-example can be seen `here <ComPath/compath_model_01/readme.rst>`_
+* **readme.rst**: A description of the experiment including the links to the paper and datasets; example can be seen `here <ComPath/compath_model_01/readme.rst>`_
 
-* **test.py**: A unit test that checks whether your model can be instantiated correctly using your
-provided files
+* **test.py**: A unit test that checks whether your model can be instantiated correctly using your provided files
 
 **Note**:: To ensure the quality of the shared model, we require that the corresponding experiment
 was reviewed and published in a paper. Furthermore, the dataset used to train the model needs to be public accessible.
