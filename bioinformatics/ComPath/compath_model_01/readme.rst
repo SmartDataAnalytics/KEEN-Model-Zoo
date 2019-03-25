@@ -1,6 +1,6 @@
 KGE Model for ComPath
 =====================
-TransE model that was trained on ComPath[1], and the experiment was reported in [2,3].
+In this experiment the TransE model trained on ComPath[1], and the experiment was reported in [2,3].
 The results are saved in **evaluation_summary.json**.
 
 In this experiment the TransE model was trained, and all hyper-parameter values are mentioned in
