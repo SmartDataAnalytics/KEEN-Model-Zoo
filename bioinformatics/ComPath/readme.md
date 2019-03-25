@@ -22,10 +22,10 @@ Following figure shows the hierarchies between pathways:
 
 
 ## References
-[1]: Domingo-Fernandez, Daniel, et al. "ComPath: An ecosystem for exploring, analyzing, and curating mappings across
- pathway databases." NPJ systems biology and applications 5.1 (2018): 3.
+[1]: Domingo-Fernandez, Daniel, *et al.* "ComPath: An ecosystem for exploring, analyzing, and curating mappings across
+ pathway databases." NPJ systems biology and applications 4.43 (2018).
 
-[2]: Ali, Mehdi, et al. "BioKEEN: A library for learning and evaluating biological knowledge graph embeddings." bioRxiv (2018): 475202.
+[2]: Ali, Mehdi, *et al.* "BioKEEN: A library for learning and evaluating biological knowledge graph embeddings." bioRxiv (2018): 475202.
 
 [3]: Mehdi Ali, Charles Tapley Hoyt, Daniel Domingo-Fernández, Jens Lehmann, Hajira Jabeen, BioKEEN: a library for 
 learning and evaluating biological knowledge graph embeddings, Bioinformatics,
