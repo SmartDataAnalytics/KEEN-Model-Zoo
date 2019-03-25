@@ -24,7 +24,7 @@ a directory with following files:
 
 * **test.py**: A unit test that checks whether your model can be instantiated correctly using your provided files
 
-**Note**: To ensure the quality of the shared model, we require that the corresponding experiment
+**Note**: To ensure the quality of the shared models, we require that the corresponding experiment
 was reviewed and published in a paper. Furthermore, the dataset used to train the model needs to be public accessible.
 
 We will review your pull request and assist you if any fixes are required.
