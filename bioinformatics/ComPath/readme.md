@@ -1,4 +1,4 @@
-# KGE Model for ComPath
+# KGE Models for ComPath
 
 This directory contains KGE models trained on ComPath [1]. The ComPath dataset contains inter- and intra-database pathway mappings
 that represent equivalent and hierarchically related pathways. The resources included
