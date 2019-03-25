@@ -23,6 +23,27 @@ a directory with following files:
 
 * **test.py**: A unit test that checks whether your model can be instantiated correctly using your provided files
 
++------------------------+-----------------------+
+| Source                 | Description                   |
+|                        |                       |
++========================+=======================+
+| ComPath                | Configuration file (automatically generated)  describing the experienntal set     |
++------------------------+-----------------------+
+| DrugBank               | The learned embedding for the entities     |
++------------------------+-----------------------+
+| HIPPIE                 | |hippie_zenodo|       |
++------------------------+-----------------------+
+| KEGG                   | |kegg_zenodo|         |
++------------------------+-----------------------+
+| miRTarBase             | |mirtarbase_zenodo|   |
++------------------------+-----------------------+
+| MSigDB                 | |msig_zenodo|         |
++------------------------+-----------------------+
+| Reactome               | |reactome_zenodo|     |
++------------------------+-----------------------+
+| WikiPathways           | |wikipathways_zenodo| |
++------------------------+-----------------------+
+
 **Note**: To ensure the quality of the shared model, we require that the corresponding experiment
 was reviewed and published in a paper. Furthermore, the dataset used to train the model needs to be public accessible.
 
