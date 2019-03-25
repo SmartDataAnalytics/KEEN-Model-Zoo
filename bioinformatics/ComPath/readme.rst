@@ -9,10 +9,10 @@ biological pathways, the *equivalentTo* and *isPartOf* relationship were introdu
 
 Following figure shows the hierarchies between pathways:
 
-.. image:: bioinformatics/ComPath/figures/compath_example.png
+.. image:: ../figures/compath_example.png
 
 
-## Links to Resources
+Links to Resources
 
 * Paper: [2,3]
 * **Note**: ComPath has been updated, for this reason we have uploaded the dataset version that we have used for
