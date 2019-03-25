@@ -1,8 +1,9 @@
-KEEN-Model-Zoo
+KEEN Model Zoo
 ==============
 This repository represents the model zoo for the KEEN-Universe. All models that are trained with `PyKEEN <https://github.com/SmartDataAnalytics/PyKEEN>`_
 and `BioKEEN <https://github.com/SmartDataAnalytics/BioKEEN>`_ can be shared along the additional experimental artefacts
-by means of this model zoo (please check below for the requirements).
+by means of this model zoo (please check below for the requirements). The models are sorted according the research
+fields.
 
 
 How to Share Your KGE Model
@@ -27,3 +28,6 @@ a directory with following files:
 was reviewed and published in a paper. Furthermore, the dataset used to train the model needs to be public accessible.
 
 We will review your pull request and assist you if any fixes are required.
+The KEEN Model ZOO is licensed under the MIT License. By contributing to the project, you agree to the license
+and copyright terms therein and release your contribution under these terms.
+
