@@ -3,8 +3,7 @@
 TransE model that was trained on ComPath[1], and the experiment was reported in [2,3].
 The results are saved in **evaluation_summary.json**.
 
-In this experiment TransE was trained, all hyper-parameter values are mentioned in 
-![configuration.json](https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath_model_01/configuration.json
+In this experiment TransE was trained, all hyper-parameter values are mentioned in ![configuration.json](https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath_model_01/configuration.json).
 
 
 ## Contained Files:
