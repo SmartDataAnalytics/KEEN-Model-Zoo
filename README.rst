@@ -32,13 +32,6 @@ We will review your pull request and assist you if any fixes are required.
 The KEEN Model Zoo is licensed under the MIT License. By contributing to the project, you agree to the license
 and copyright terms therein and release your contribution under these terms.
 
-Current Research Fields
-=======================
-Currently, KGE models are available for experiments conducted in the fields of:
-
-* `Bioinformatics <bioinformatics>`_ 
-* `Scholarly data research <scholarly_data_related_recommendations>`_
-
 
 Structure of the KEEN Model Zoo
 ===============================
