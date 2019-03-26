@@ -12,14 +12,6 @@ Following figure shows the hierarchies between pathways:
 .. image:: figures/compath_example.png
 
 
-Links to Resources
-==================
-
-* Paper: [2,3]
-* **Note**: ComPath has been updated, for this reason we have uploaded the dataset version that we have used for our experiments: `dataset <https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath.keen.tsv>`_
-
-
-
 References
 ==========
 [1]: Domingo-Fernandez, Daniel, *et al.* "ComPath: An ecosystem for exploring, analyzing, and curating mappings across
