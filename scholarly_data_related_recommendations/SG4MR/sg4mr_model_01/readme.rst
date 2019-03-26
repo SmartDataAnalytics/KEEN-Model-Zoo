@@ -19,6 +19,14 @@ Contained Files:
 * losses.json
 * trained_model.pkl
 
+
+Links to Resources
+==================
+
+* Paper: [1]
+* `Dataset <https://github.com/vhenk/masterthesis/tree/master/SG4MR%20%5Bmetaresearch%20paper%5D/Dataset%20>`_
+
+
 References
 ==========
 [1]: Henk, Veronika, et al. "Metaresearch Recommendations using Knowledge Graph Embeddings." (2019).
