@@ -3,10 +3,10 @@ KGE Models for SG4MR
 
 This directory contains KGE models trained on SG4MR [1], a KG for scholarly data containing for entity types:
 
-* Author
-* Paper
-* Department
-* Event
+* *Author*
+* *Paper*
+* *Department*
+* *Event*
 
 and four relationship types:
 
