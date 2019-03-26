@@ -3,12 +3,6 @@ KGE Model for ComPath
 In this experiment the TransE model was trained on ComPath[1], and the experiment was reported in [2,3].
 The corresponding results are saved in `evaluation_summary.json <https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath_model_01/evaluation_summary.json>`_, and the hyper-parameter values can be found in `configuration.json <https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath_model_01/configuration.json>`_
 
-Links to Resources
-==================
-
-* Paper: [2,3]
-* **Note**: ComPath has been updated, for this reason we have uploaded the dataset version that we have used for our experiments: `dataset <https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath.keen.tsv>`_
-
 
 Contained Files:
 ================
@@ -20,6 +14,13 @@ Contained Files:
 * evaluation_summary.json
 * losses.json
 * trained_model.pkl
+
+Links to Resources
+==================
+
+* Paper: [2,3]
+* **Note**: ComPath has been updated, for this reason we have uploaded the dataset version that we have used for our experiments: `dataset <https://github.com/SmartDataAnalytics/KEEN-Model-Zoo/blob/master/bioinformatics/ComPath/compath.keen.tsv>`_
+
 
 References
 ==========
