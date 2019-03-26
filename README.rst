@@ -37,4 +37,19 @@ Current Research Fields
 Currently, KGE models are available for experiments conducted in the fields of:
 
 * `Bioinformatics <bioinformatics>`_ 
-* `Scholarly data research <scholarly_data_related_recommendations>`_ 
+* `Scholarly data research <scholarly_data_related_recommendations>`_
+
+
+Structure of the KEEN Model Zoo
+===============================
+
+Experiments are categorised based on the research field. Currently, KGE models are available for experiments conducted
+in the fields of:
+
+* `Bioinformatics <bioinformatics>`_
+* `Scholarly data research <scholarly_data_related_recommendations>`_
+
+Each of the directories contain subdirectories corresponding to datasets on which the experiments have been performed.
+And each of the dataset-directories contain subdirectories comprising the artifacts of a specifc experiment that has been
+conducted on the dataset.
+
