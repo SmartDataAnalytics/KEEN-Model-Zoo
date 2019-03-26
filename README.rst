@@ -6,8 +6,8 @@ via this model zoo (please check requirements listed below). The models are sort
 fields.
 
 
-How to Share Your KGE Model
-===========================
+How to Share Your Experimental Artifacts
+========================================
 To share your KGE model (and further experimental artefacts) please make a pull request. The pull request should contain
 a directory with following files (that will be created automatically by Py/BioKEEN except the readme.rst and the test.py):
 
