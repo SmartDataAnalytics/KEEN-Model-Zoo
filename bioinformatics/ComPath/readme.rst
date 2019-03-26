@@ -7,7 +7,7 @@ in ComPath are Kyoto Encyclopedia of Genes and Genomes (KEGG),
 Reactome, and WikiPathways. To map equivalences and hierarchies of
 biological pathways, the *equivalentTo* and *isPartOf* relationship were introduced.
 
-Following figure shows the hierarchies between pathways:
+Following figure shows hierarchies between pathways:
 
 .. image:: figures/compath_example.png
 
