@@ -1,0 +1,6 @@
+{
+  "/author/affiliation/department": 0,
+  "/author/collaboration/coauthor": 1,
+  "/author/publication/paper": 2,
+  "/author/publication/paper/publication_location/venue": 3
+}

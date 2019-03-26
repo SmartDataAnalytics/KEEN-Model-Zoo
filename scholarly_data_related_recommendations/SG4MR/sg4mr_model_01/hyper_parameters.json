@@ -1,0 +1,16 @@
+training_set_path: data/train.tsv 
+execution_mode: Training_mode 
+kg_embedding_model_name: TransE 
+embedding_dim: 100 
+margin_loss: 8.0 
+scoring_function: 1 
+normalization_of_entities: 2 
+learning_rate: 0.1 
+batch_size: 256 
+num_epochs: 1500 
+test_set_path: data/test.tsv 
+filter_negative_triples: True 
+preferred_device: gpu 
+output_direc: keenNew/ 
+num_entities: 12609 
+num_relations: 4 
