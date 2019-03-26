@@ -2,7 +2,7 @@ KEEN Model Zoo
 ==============
 This repository represents the model zoo for the KEEN-Universe. All models that are trained with `PyKEEN <https://github.com/SmartDataAnalytics/PyKEEN>`_
 and `BioKEEN <https://github.com/SmartDataAnalytics/BioKEEN>`_ can be shared along the additional experimental artefacts
-by means of this model zoo (please check below for the requirements). The models are sorted according the research
+via this model zoo (please check requirements listed below). The models are sorted according the research
 fields.
 
 
