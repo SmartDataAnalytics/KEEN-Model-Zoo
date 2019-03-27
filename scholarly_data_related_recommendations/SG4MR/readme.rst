@@ -26,5 +26,4 @@ triples), 2870 paper entities, 4495 author entities, 5064 department entities, a
 
 References
 ==========
-[1]: Henk, Veronika, et al. "Metaresearch Recommendations using Knowledge Graph Embeddings." (2019).
-
+.. [1] Henk, Veronika, et al. "Metaresearch Recommendations using Knowledge Graph Embeddings." (2019).
