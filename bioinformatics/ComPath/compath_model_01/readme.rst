@@ -24,12 +24,8 @@ Links to Resources
 
 References
 ==========
-.. [1]: Domingo-Fernandez, Daniel, et al. "ComPath: An ecosystem for exploring, analyzing, and curating mappings across
-        pathway databases." NPJ systems biology and applications 5.1 (2018): 3.
-
-.. [2]: Ali, Mehdi, et al. "BioKEEN: A library for learning and evaluating biological knowledge graph embeddings." bioRxiv       
-        (2018): 475202.
-
-.. [3]: Mehdi Ali, Charles Tapley Hoyt, Daniel Domingo-Fernández, Jens Lehmann, Hajira Jabeen, BioKEEN: a library for
-        learning and evaluating biological knowledge graph embeddings, Bioinformatics,
-        btz117, https://doi.org/10.1093/bioinformatics/btz117
+.. [1] Domingo-Fernández, Daniel, *et al.* (2018) `ComPath: An ecosystem for exploring, analyzing, and curating mappings ´
+       across pathway databases <https://doi.org/10.1038/s41540-018-0078-8>`_. NPJ systems biology and applications 4.43 .
+.. [2] Mehdi Ali, Charles Tapley Hoyt, Daniel Domingo-Fernández, Jens Lehmann, & Hajira Jabeen(2019) `BioKEEN: a library for 
+       learning and evaluating biological knowledge graph embeddings <https://doi.org/10.1093/bioinformatics/btz117>`_,    
+       *Bioinformatics*, btz117.
