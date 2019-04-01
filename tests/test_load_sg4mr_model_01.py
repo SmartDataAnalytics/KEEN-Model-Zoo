@@ -12,6 +12,6 @@ class TestModelInstantiation(unittest.TestCase):
 
     def test_instantation(self):
         model_direc = '../scholarly_data_related_recommendations/SG4MR/sg4mr_model_01'
-        transE_compath_model = load_model(model_directory = model_direc)
+        transE_sg4mr_model = load_model(model_directory = model_direc)
 
-        self.assertIsNotNone(transE_compath_model)
+        self.assertIsNotNone(transE_sg4mr_model)
