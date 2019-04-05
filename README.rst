@@ -29,7 +29,7 @@ was reviewed and published in a paper. Furthermore, the dataset used to train th
 
 We will review your pull request and assist you if any fixes are required.
 
-The KEEN Model Zoo is licensed under the CC BY 4.0 License. By contributing to the project, you agree to the license
+The KEEN Model Zoo is licensed under the MIT License. By contributing to the project, you agree to the license
 and copyright terms therein and release your contribution under these terms.
 
 
